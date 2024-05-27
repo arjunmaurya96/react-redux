@@ -3,7 +3,8 @@ import img1 from '../assets/img/1.png'
 import { FaShoppingCart } from "react-icons/fa";
  
 
-const Home = () => {
+const Home = (props) => {
+    console.log("Home", props);
     return (
         <>
         <div className='add-to-cart'>
@@ -23,7 +24,9 @@ const Home = () => {
                    </span>
                 </div>
                 <div className='btn-wrapper item'>
-                  <button>Add to Cart </button>
+                  <button onClick={()=>props.addToCartHanlder({price:1000,name:"i phone 11"})}>
+                    Add to Cart 
+                    </button>
                 </div>
             </div>
 
